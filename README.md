@@ -7,13 +7,22 @@
 
 Erase images CLS automatically with this [Markdown Exit](https://github.com/Barbapapazes/markdown-exit) plugin.
 
+- 🖼️ Automatically sets `width` and `height` on images to prevent Cumulative Layout Shift (CLS).
+- 💤 Adds `loading="lazy"` for better performance.
+- 🎨 Generates a blurhash for each image and applies it as a background placeholder for smooth loading.
+
+Based on the article [Markdown Exit Breaks the Rules With Async Rendering](https://soubiran.dev/posts/markdown-exit-breaks-the-rules-with-async-rendering).
+
 ## Installation
 
 ```bash
-pnpm install markdown-exit-image
+pnpm add -D markdown-exit-image
 ```
 
 ## Usage
+
+> [!NOTE]
+> Contributions, through issues or pull requests, to extend support for other frameworks are welcome!
 
 ```typescript
 import { image } from 'markdown-exit-image'
@@ -23,15 +32,6 @@ md.use(image, {
 })
 ```
 
-This plugin will automatically:
-
-- Set `loading="lazy"`
-- Set `width` and `height` attributes
-- Generate a blurhash and set it as a background image
-
-> [!WARNING]
-> This plugin requires images to be stored locally. Please, open an issue if you need support for remote images.
-
 ## Options
 
 ### `publicFolder`
@@ -40,6 +40,9 @@ This plugin will automatically:
 - Default: `"public"`
 
 The path to the public folder where the images are stored.
+
+> [!WARNING]
+> This plugin requires images to be stored locally. Please, open an issue if you need support for remote images.
 
 ## Sponsors
 
