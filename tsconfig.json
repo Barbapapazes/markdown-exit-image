@@ -1,0 +1,11 @@
+{
+  "extends": "@tsconfig/node20",
+  "compilerOptions": {
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "src"
+  ]
+}
