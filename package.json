@@ -36,7 +36,8 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "build": "tsdown",
-    "test": "vitest"
+    "test": "vitest",
+    "release": "bumpp"
   },
   "peerDependencies": {
     "markdown-exit": "1.0.0-beta.6"
